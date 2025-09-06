@@ -1,0 +1,252 @@
+/* --- General Body & Layout --- */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex.h-screen {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    flex-shrink: 0;
+}
+
+#main-content {
+    flex-grow: 1;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar-link {
+    transition: all 0.3s ease;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+    background-color: #4a5568; /* gray-700 */
+    color: #facc15; /* yellow-400 */
+    transform: translateX(5px);
+}
+
+/* --- Module Content Styling --- */
+.module-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1e3a8a; /* blue-800 */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3b82f6; /* blue-500 */
+    padding-bottom: 0.5rem;
+}
+
+.module-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1d4ed8; /* blue-700 */
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.module-content > h4, .module-content .styled-h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1e40af;
+    background-color: rgba(219, 234, 254, 0.6);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.375rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-left: 3px solid #3b82f6;
+}
+
+.module-content p, .module-content ul, .module-content ol, .module-content table {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.module-content ul, .module-content ol {
+    margin-left: 1.5rem;
+}
+
+.module-content ol.list-decimal {
+    list-style-type: decimal;
+}
+
+.module-content .formula {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    color: #1e40af;
+    background-color: #f0f9ff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid #e0f2fe;
+    display: inline-block;
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+/* --- Interactive Boxes & Practice Problems --- */
+.interactive-box, .practice-problem-box {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.interactive-box h4, .practice-problem-box h4 {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #1e40af !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: block !important;
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+    border-left: none !important;
+}
+
+/* --- Quiz Styling --- */
+.quiz-question {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.quiz-option:hover {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+}
+
+.quiz-option.correct, .practice-problem-box .correct-answer {
+    background-color: #d1fae5 !important;
+    border-color: #10b981 !important;
+    color: #065f46 !important;
+}
+
+.quiz-option.incorrect, .practice-problem-box .incorrect-answer {
+    background-color: #fee2e2 !important;
+    border-color: #ef4444 !important;
+    color: #991b1b !important;
+}
+
+.feedback-message, .practice-feedback {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* --- Calculator & Input Styling --- */
+.calculator input, .calculator select, .practice-problem-box input {
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+}
+
+.calculator button, .practice-problem-box button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.calculator button:hover, .practice-problem-box button:hover {
+    background-color: #2563eb;
+}
+
+/* --- Helper Component Styling --- */
+.solution-details {
+    font-size: 0.9rem;
+    color: #4b5563;
+    background-color: #f9fafb;
+    border-left: 3px solid #3b82f6;
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+    border-radius: 0.25rem;
+}
+
+.plasmid-info-box, .media-component-info-box {
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.media-component-button {
+    background-color: #93c5fd;
+    border: 1px solid #60a5fa;
+}
+
+.media-component-button:hover {
+    background-color: #60a5fa;
+}
+
+.media-component-button.selected {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+}
+
+.highlight-note {
+    background-color: #fef9c3; /* Tailwind yellow-100 */
+    border-left: 4px solid #facc15; /* Tailwind yellow-400 */
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.highlight-note p {
+    margin-bottom: 0 !important;
+}
+
+.goal-box {
+    background-color: #e0f2fe; /* Tailwind sky-100 */
+    border: 1px solid #7dd3fc; /* Tailwind sky-300 */
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 120px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.goal-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.goal-box strong {
+    color: #0c4a6e; /* Tailwind sky-800 */
+    font-size: 1.05em;
+    margin-bottom: 0.5rem;
+}
